@@ -1,0 +1,9 @@
+project: keystone
+target: ppc64
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ppc64/testsuite
+cmds:
+  - cmd: /mayhem/ppc64
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/ppc64.dict
